@@ -37,8 +37,11 @@ function sum(){
 
   function isPangram(string) {
     var regex = /([a-z])(?!.*\1)/g;
-    return (string.match(regex) || []).length === 26;
+    return (string.toLowerCase().match(regex) || []).length === 26;
 }
 
 console.log("1.", isPangram("The quick brown fox jumps over the lazy dog."))
 console.log("2.", isPangram("This is not a panogram."))
+console.log("3.", isPangram("Cwm fjord bank glyphs vext quiz"))
+console.log("4.", isPangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
+console.log("5.", isPangram("AbCdEfGhIjKlM zYxWvUtSrQpOn"))
